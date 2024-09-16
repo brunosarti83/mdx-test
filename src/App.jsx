@@ -15,8 +15,8 @@ function App() {
       .then(({ data }) => {
         const url = data.baseUrl;
         const hash = data.chapter.hash;
-        const fileName = data.chapter.dataSaver[4];
-        const pageUrl = `${url}/data-saver/${hash}/${fileName}`;
+        const fileName = data.chapter.data[4];
+        const pageUrl = `${url}/data/${hash}/${fileName}`;
         setPage(pageUrl);
       })
       .catch((err) => console.log(err));
